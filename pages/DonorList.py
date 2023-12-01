@@ -53,7 +53,7 @@ if(grant != 'none'):
     st.write("Loading - may take upto 2 minutes")
     filtered_data = dfv[dfv['grantAddress'] == grant]
     required_columns = filtered_data[['title','voter_id', 'block_timestamp', 'token_symbol','amount','amountUSD', 'round_name']]
-    required_column = required_column['amount']/1000000000000000000
+    required_columns = required_columns['amount']/1000000000000000000
     st.dataframe(required_columns)
 
     csv = convert_df(required_columns)
