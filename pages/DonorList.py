@@ -54,8 +54,8 @@ if(grant != 'none'):
     filtered_data = dfv[dfv['grantAddress'] == grant]
     required_columns = filtered_data[['title','voter_id', 'block_timestamp', 'token_symbol','amount','amountUSD', 'round_name']]
     divide = 1000000000000000000
-    required_columns = required_columns['amount'].astype(float)
-    required_columns = required_columns['amount']/divide
+    required_columns['amount'] = required_columns['amount'].astype(float)
+    required_columns['amount'] = required_columns['amount']/divide
     st.dataframe(required_columns)
 
     csv = convert_df(required_columns)
