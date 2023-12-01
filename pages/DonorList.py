@@ -39,6 +39,10 @@ else:
     data_load_state.text("")
 
 
+@st.experimental_memo
+def convert_df(df):
+   return df.to_csv(index=False).encode('utf-8')
+
 if(project_id != 'none'):
     st.write("Loading - may take upto 2 minutes")
     filtered_data = dfv[dfv['projectId'] == project_id]
