@@ -15,7 +15,7 @@ st.title('💸 Projects and their donors')
 
 st.write("This page gives you the list of donors for a particular project after you enter the project id.The projectid should have the same capitalization as is given in gitcoin")
 
-st.write("updated")
+st.write("This is a test")
 
 project_id = st.text_input('Enter Project ID', 'none')
 
